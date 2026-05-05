@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 const navLinks = [
   { label: "Home", href: "/" },
@@ -35,7 +36,7 @@ export default function Footer() {
 
           {/* Navigation */}
           <div>
-            <p className="text-white/40 text-xs uppercase tracking-widest mb-4">Navigation</p>
+            <p className="text-white text-base font-bold uppercase tracking-widest mb-4">Navigation</p>
             <ul className="space-y-2">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -52,13 +53,25 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <p className="text-white/40 text-xs uppercase tracking-widest mb-4">Contact</p>
-            <a
-              href="mailto:customerservices@newbell.net"
-              className="text-white/65 text-sm hover:text-white transition-colors duration-200 block mb-5"
-            >
-              customerservices@newbell.net
-            </a>
+            <p className="text-white text-base font-bold uppercase tracking-widest mb-4">Contact</p>
+            <div className="text-white/65 text-sm mb-5 space-y-1.5">
+              <a href="tel:+66614134322" className="hover:text-white transition-colors duration-200 block">
+                Khun Ple: +66-61-413-4322 (Phone/Line)
+              </a>
+              <a href="tel:+66988540410" className="hover:text-white transition-colors duration-200 block">
+                Khun Varun: +66-98-854-0410 (Phone/WhatsApp/Line)
+              </a>
+              <a href="tel:+6622041645" className="hover:text-white transition-colors duration-200 block">
+                Office: +66-2-204-1645
+              </a>
+              <p>Fax: +66-2-261-0874</p>
+              <a href="mailto:varun@newbell.net" className="hover:text-white transition-colors duration-200 block">
+                Email: varun@newbell.net
+              </a>
+              <a href="mailto:customerservices@newbell.net" className="hover:text-white transition-colors duration-200 block">
+                Email: customerservices@newbell.net
+              </a>
+            </div>
             <div className="flex items-center gap-3">
               {/* LINE */}
               <a
@@ -66,25 +79,17 @@ export default function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="LINE"
-                className="w-8 h-8 flex items-center justify-center rounded-full bg-[#00AE38] hover:opacity-90 transition-opacity"
+                className="w-8 h-8 flex items-center justify-center hover:opacity-90 transition-opacity"
               >
-                <svg width="16" height="16" viewBox="0 0 48 48" fill="none">
-                  <path
-                    d="M24 4C12.954 4 4 12.059 4 22c0 8.837 7.022 16.218 16.5 17.69L20 44l5.5-4.5C36.954 38.218 44 31.119 44 22 44 12.059 35.046 4 24 4z"
-                    fill="white"
-                  />
-                </svg>
+                <Image src="/LINE_logo.svg.png" alt="LINE" width={32} height={32} className="object-contain" />
               </a>
               {/* Email */}
               <a
                 href="mailto:customerservices@newbell.net"
                 aria-label="Email"
-                className="w-8 h-8 flex items-center justify-center rounded-full bg-white hover:opacity-90 transition-opacity"
+                className="w-8 h-8 flex items-center justify-center hover:opacity-90 transition-opacity"
               >
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#EA4335" strokeWidth="1.5" fill="none"/>
-                  <path d="M22 6l-10 7L2 6" stroke="#EA4335" strokeWidth="1.5"/>
-                </svg>
+                <Image src="/Mail_icon.png" alt="Email" width={32} height={32} className="object-contain" />
               </a>
             </div>
           </div>

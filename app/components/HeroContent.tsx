@@ -7,6 +7,7 @@ interface HeroContentProps {
   headingLine1: string;
   headingLine2: string;
   subtitle: string;
+  subtitleSingleLine?: boolean;
   children?: React.ReactNode;
 }
 
@@ -32,6 +33,7 @@ export default function HeroContent({
   headingLine1,
   headingLine2,
   subtitle,
+  subtitleSingleLine = false,
   children,
 }: HeroContentProps) {
   return (
@@ -54,7 +56,7 @@ export default function HeroContent({
 
       <motion.p
         variants={itemVariants}
-        className="text-base md:text-lg lg:text-xl text-white/90 leading-relaxed max-w-2xl [text-shadow:0_1px_8px_rgba(0,0,0,0.7)]"
+        className={`text-base md:text-lg lg:text-xl text-white/90 leading-relaxed [text-shadow:0_1px_8px_rgba(0,0,0,0.7)] ${subtitleSingleLine ? "lg:max-w-none lg:whitespace-nowrap" : "max-w-[62rem]"}`}
       >
         {subtitle}
       </motion.p>

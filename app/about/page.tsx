@@ -27,7 +27,7 @@ export default function AboutPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 hero-overlay" />
-        <div className="relative z-10 px-6 max-w-4xl mx-auto py-20">
+        <div className="relative z-10 px-6 max-w-5xl mx-auto py-20">
           <HeroContent
             badge="Our Story"
             headingLine1="Built on Chemistry."

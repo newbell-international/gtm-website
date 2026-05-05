@@ -5,12 +5,13 @@ import Footer from "./components/Footer";
 import InquiryForm from "./components/InquiryForm";
 import FadeIn from "./components/FadeIn";
 import HeroContent from "./components/HeroContent";
+import HeroSlideshow from "./components/HeroSlideshow";
 
 // ─── Data ─────────────────────────────────────────────────────
 const applicationCards = [
   {
     title: "Water Treatment",
-    body: "From potable water purification to effluent treatment and cooling tower, boiler maintenance. Our chemicals meet the most stringent regulations.",
+    body: "From potable water purification to effluent treatment, cooling tower and boiler maintenance, our chemicals meet the most stringent regulations.",
     image: "/7164.jpg",
   },
   {
@@ -28,15 +29,16 @@ const applicationCards = [
 const offerings = [
   "Focus on\nSupply Chain\nManagement",
   "Customized\nSolutions with\nTechnical\nExpertise",
-  "Environmental\nSustainability\nDriven",
+  "Environment\nSustainability\nDriven",
 ];
 
 const distributors = [
-  { src: "/116721_logo_20191105161131.webp", alt: "Aditya Birla Chemicals", w: 140, h: 70 },
+  { src: "/116721_logo_20191105161131.webp", alt: "Aditya Birla Chemicals", w: 80, h: 40 },
   { src: "/logo-fineamin2.png", alt: "FINEAMIN", w: 160, h: 55 },
   { src: "/evonik2020.png", alt: "Evonik", w: 150, h: 55 },
-  { src: "/MyTWA-LOGO_new_extended-4eb9c841.png", alt: "MyTWA Aqua Solutions", w: 160, h: 60 },
-  { src: "/logo-2.svg", alt: "NCSP", w: 110, h: 50 },
+  { src: "/MyTWA-LOGO_new_extended-4eb9c841.png", alt: "MyTWA Aqua Solutions", w: 280, h: 105 },
+  { src: "/logo-2-2.svg", alt: "NCSP", w: 132, h: 60 },
+  { src: "/logo-JMEnvronmentLab.png", alt: "JM Environment Lab", w: 70, h: 52 },
 ];
 
 // ─── Page ──────────────────────────────────────────────────────
@@ -47,20 +49,14 @@ export default function HomePage() {
 
       {/* 1. HERO */}
       <section className="relative min-h-[75vh] flex items-center justify-center text-center pt-16 lg:pt-20">
-        <Image
-          src="/thedigitalartist-ai-generated-8069992_1920.jpg"
-          alt="Chemical laboratory"
-          fill
-          priority
-          className="object-cover"
-        />
-        <div className="absolute inset-0 hero-overlay" />
-        <div className="relative z-10 px-6 max-w-4xl mx-auto">
+        <HeroSlideshow />
+        <div className="relative z-20 px-6 max-w-4xl mx-auto">
           <HeroContent
             badge="G.T.M. Impex Co. Ltd."
             headingLine1="Solution Providers for"
             headingLine2="High Performing Chemicals"
             subtitle="Means for Sustainable Water Treatment to Industrial Cleaning Applications"
+            subtitleSingleLine
           >
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <Link href="/products" className="btn-white">
@@ -166,34 +162,19 @@ export default function HomePage() {
           </h2>
           <div className="w-12 h-1 bg-[#00AE38] rounded-full mx-auto mb-12" />
           {/* Row 1: 3 logos */}
-          <div className="flex flex-col items-center gap-12">
-            <div className="flex flex-wrap items-center justify-center gap-14 lg:gap-20">
-              {distributors.slice(0, 3).map((d) => (
-                <div key={d.alt} className="flex items-center justify-center">
-                  <Image
-                    src={d.src}
-                    alt={d.alt}
-                    width={d.w * 1.6}
-                    height={d.h * 1.6}
-                    className="object-contain"
-                  />
-                </div>
-              ))}
-            </div>
-            {/* Row 2: 2 logos centred */}
-            <div className="flex flex-wrap items-center justify-center gap-14 lg:gap-20">
-              {distributors.slice(3).map((d) => (
-                <div key={d.alt} className="flex items-center justify-center">
-                  <Image
-                    src={d.src}
-                    alt={d.alt}
-                    width={d.w * 1.6}
-                    height={d.h * 1.6}
-                    className="object-contain"
-                  />
-                </div>
-              ))}
-            </div>
+          <div className="grid grid-cols-3 items-center gap-y-12 gap-x-10 lg:gap-x-16 w-full">
+            {distributors.map((d) => (
+              <div key={d.alt} className="flex items-center justify-center">
+                <Image
+                  src={d.src}
+                  alt={d.alt}
+                  width={d.w * 2.4}
+                  height={d.h * 2.4}
+                  style={{ width: d.w * 2.4, height: "auto" }}
+                  className="object-contain max-w-full"
+                />
+              </div>
+            ))}
           </div>
         </div>
       </section>

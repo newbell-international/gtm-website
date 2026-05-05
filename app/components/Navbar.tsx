@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
@@ -65,25 +66,17 @@ export default function Navbar() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="LINE"
-            className="w-8 h-8 flex items-center justify-center rounded-full bg-[#00AE38] hover:opacity-90 transition-opacity"
+            className="w-8 h-8 flex items-center justify-center hover:opacity-90 transition-opacity"
           >
-            <svg width="18" height="18" viewBox="0 0 48 48" fill="none">
-              <path
-                d="M24 4C12.954 4 4 12.059 4 22c0 8.837 7.022 16.218 16.5 17.69L20 44l5.5-4.5C36.954 38.218 44 31.119 44 22 44 12.059 35.046 4 24 4z"
-                fill="white"
-              />
-            </svg>
+            <Image src="/LINE_logo.svg.png" alt="LINE" width={32} height={32} className="object-contain" />
           </a>
-          {/* Gmail icon */}
+          {/* Mail icon */}
           <a
             href="mailto:customerservices@newbell.net"
             aria-label="Email"
-            className="w-8 h-8 flex items-center justify-center rounded-full bg-white hover:opacity-90 transition-opacity"
+            className="w-8 h-8 flex items-center justify-center hover:opacity-90 transition-opacity"
           >
-            <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#EA4335" strokeWidth="1.5" fill="none"/>
-              <path d="M22 6l-10 7L2 6" stroke="#EA4335" strokeWidth="1.5"/>
-            </svg>
+            <Image src="/Mail_icon.png" alt="Email" width={32} height={32} className="object-contain" />
           </a>
         </div>
 
@@ -122,20 +115,15 @@ export default function Navbar() {
               href="https://line.me"
               target="_blank"
               rel="noopener noreferrer"
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-[#00AE38]"
+              className="w-8 h-8 flex items-center justify-center hover:opacity-90 transition-opacity"
             >
-              <svg width="16" height="16" viewBox="0 0 48 48" fill="none">
-                <path d="M24 4C12.954 4 4 12.059 4 22c0 8.837 7.022 16.218 16.5 17.69L20 44l5.5-4.5C36.954 38.218 44 31.119 44 22 44 12.059 35.046 4 24 4z" fill="white"/>
-              </svg>
+              <Image src="/LINE_logo.svg.png" alt="LINE" width={32} height={32} className="object-contain" />
             </a>
             <a
               href="mailto:customerservices@newbell.net"
-              className="w-8 h-8 flex items-center justify-center rounded-full bg-white"
+              className="w-8 h-8 flex items-center justify-center hover:opacity-90 transition-opacity"
             >
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
-                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" stroke="#EA4335" strokeWidth="1.5" fill="none"/>
-                <path d="M22 6l-10 7L2 6" stroke="#EA4335" strokeWidth="1.5"/>
-              </svg>
+              <Image src="/Mail_icon.png" alt="Email" width={32} height={32} className="object-contain" />
             </a>
           </li>
         </ul>

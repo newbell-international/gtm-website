@@ -52,12 +52,12 @@ export default function ContactPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 hero-overlay" />
-        <div className="relative z-10 px-6 max-w-4xl mx-auto py-20">
+        <div className="relative z-10 px-6 max-w-5xl mx-auto py-20">
           <HeroContent
             badge="Get In Touch"
             headingLine1="Let's Find"
             headingLine2="Your Solution"
-            subtitle="Tell us about your requirements and we'll respond with a tailored recommendation. Whether you need technical specifications, pricing, or a consultation on which chemistry best fits your process, we are ready to help."
+            subtitle="Let us know about your requirements and we'll have a tailored recommendation for you. Whether you need technical specifications, pricing, or a consultation, we are ready to help."
           />
         </div>
       </section>
@@ -110,25 +110,20 @@ export default function ContactPage() {
                 </p>
               </div>
               <div>
-                <h3 className="text-xl font-bold mb-2">Phone</h3>
-                <p className="text-base opacity-90 space-y-1">
-                  +66 61 413 4322<br />
-                  +66 98 854 0410<br />
-                  (+66 2-204-1645)
-                </p>
-              </div>
-              <div>
-                <h3 className="text-xl font-bold mb-2">Fax</h3>
-                <p className="text-base opacity-90">+66-2-261-0874</p>
+                <h3 className="text-xl font-bold mb-2">Contact</h3>
+                <div className="text-base text-white/65 space-y-1">
+                  <a href="tel:+66614134322" className="hover:text-white transition-colors duration-200 block">Khun Ple: +66-61-413-4322 (Phone/Line)</a>
+                  <a href="tel:+66988540410" className="hover:text-white transition-colors duration-200 block">Khun Varun: +66-98-854-0410 (Phone/WhatsApp/Line)</a>
+                  <a href="tel:+6622041645" className="hover:text-white transition-colors duration-200 block">Office: +66-2-204-1645</a>
+                  <p>Fax: +66-2-261-0874</p>
+                </div>
               </div>
               <div>
                 <h3 className="text-xl font-bold mb-2">Email</h3>
-                <a
-                  href="mailto:customerservices@newbell.net"
-                  className="text-base opacity-90 hover:opacity-100 underline"
-                >
-                  customerservices@newbell.net
-                </a>
+                <div className="text-base text-white/65 space-y-1">
+                  <a href="mailto:varun@newbell.net" className="hover:text-white transition-colors duration-200 underline block">varun@newbell.net</a>
+                  <a href="mailto:customerservices@newbell.net" className="hover:text-white transition-colors duration-200 underline block">customerservices@newbell.net</a>
+                </div>
               </div>
             </div>
 

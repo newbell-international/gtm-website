@@ -109,7 +109,7 @@ export default function ProductsPage() {
           className="object-cover"
         />
         <div className="absolute inset-0 hero-overlay" />
-        <div className="relative z-10 px-6 max-w-4xl mx-auto py-20">
+        <div className="relative z-10 px-6 max-w-[46rem] mx-auto py-20">
           <HeroContent
             badge="Our Product Range"
             headingLine1="Quality Chemistry."
